@@ -1,22 +1,15 @@
 import React from 'react'
-import { 
-    Link,
-} from 'react-router-dom'
-
-const styles = {
-    backgroundColor : '#114',
-    color : 'white',
-    margin : 'auto',
-    padding : '10px',
-    position : 'fix'
-}
+import { Link } from 'react-router-dom'
+import {
+    AppBar,
+    Toolbar,
+    Typography,
+    Button
+} from '@material-ui/core'
+import './NavBar.css'
 
 const NavBar = () => {
     const navItems = [
-        {
-            title : 'Home',
-            to : '/'
-        },
         {
             title : 'Schedule',
             to : '/schedule'
@@ -27,17 +20,22 @@ const NavBar = () => {
         }
     ]
     return (
-        <div style={styles}>
-            <h1>Motorcyclers Schedule</h1>
-            <ul>
-                {navItems.map(navItem => (
-                    <li>
-                        <Link to={navItem.to}>{navItem.title}</Link>
-                    </li>
-                ))}
-            </ul>
-        </div>
+        <AppBar position="static">
+            <Toolbar>
+                <Typography variant="h4">
+                    <Link className="text-white" to="/">Motorcyclers Schedule</Link>
+                </Typography>
+                    {navItems.map(navItem => (
+                        <Link to={navItem.to} className="align-right">
+                            <Button>
+                                <Typography variant="p" className="text-white">
+                                    {navItem.title}
+                                </Typography>
+                            </Button>
+                        </Link>
+                    ))}
+            </Toolbar>
+        </AppBar>
     )
 }
-
 export default NavBar

@@ -1,0 +1,12 @@
+.text-white {
+    color: white;
+}
+
+a:visited, a:link, a:hover {
+    text-decoration: none;
+}
+
+.align-right {
+    position: absolute;
+    right: 0px;
+}
