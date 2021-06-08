@@ -11,9 +11,10 @@ class MaxAmount(models.Model):
     def __str__(self):
         return str(self.amount)
 
-class Motorcyler(models.Model):
+class Motorcycler(models.Model):
     max_amount = models.ForeignKey(MaxAmount, verbose_name="Cantidad máxima", on_delete=models.CASCADE)
     actual_amount = models.IntegerField(verbose_name="Cantidad actual")
+    users = models.CharField(verbose_name="Usuarios", max_length=10000, blank=True, null=True)
 
     class Meta:
         verbose_name = "Motociclista"

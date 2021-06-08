@@ -1,13 +1,13 @@
 from rest_framework import serializers
-from .models import MaxAmount, Motorcyler
+from .models import MaxAmount, Motorcycler
 
 class MaxAmountSerializer(serializers.ModelSerializer):
     class Meta:
         model = MaxAmount
         fields = '__all__'
 
-class MotorcylerSerializer(serializers.ModelSerializer):
+class MotorcyclerSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Motorcyler
+        model = Motorcycler
         fields = '__all__'
 

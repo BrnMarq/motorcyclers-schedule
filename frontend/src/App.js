@@ -10,12 +10,12 @@ import {
 function App() {
   return (
     <Switch>
-        <Route path="/login">
-          <AdminApp />
-        </Route>
         <Route path="/schedule">
           <NavBar />
           <Schedule />
+        </Route>
+        <Route path="/login">
+          <AdminApp />
         </Route>
         <Route path="/">
           <NavBar />
