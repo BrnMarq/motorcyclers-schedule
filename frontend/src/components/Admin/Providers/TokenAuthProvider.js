@@ -1,5 +1,6 @@
 import { tokenAuthProvider } from 'ra-data-django-rest-framework'
 import apiUrl from './apiUrl'
+import { Redirect } from 'react-router-dom'
 
 const authProvider = tokenAuthProvider({obtainAuthTokenUrl : apiUrl + '/api-token-auth/'})
 
@@ -40,7 +41,6 @@ export const modifiedAuthProvider = {
             if (isStaffValidation) {
                 return Promise.resolve()
             }
-            window.location.href = "http://localhost:3000"
             return Promise.resolve()
         }
         return Promise.reject()

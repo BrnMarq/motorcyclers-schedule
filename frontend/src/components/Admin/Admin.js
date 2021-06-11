@@ -3,7 +3,6 @@ import { Admin, Resource, ListGuesser } from 'react-admin'
 import drfProvider, { fetchJsonWithAuthToken } from 'ra-data-django-rest-framework'
 import { modifiedAuthProvider as authProvider } from './Providers/TokenAuthProvider'
 import apiUrl from './Providers/apiUrl'
-import { Redirect } from 'react-router-dom'
 import { createBrowserHistory as createHistory } from 'history'
 
 const history = createHistory()
